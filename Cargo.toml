@@ -1,0 +1,21 @@
+[package]
+name = "rtex"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = true
+debug = 1
+
+[features]
+default = ["stats"]
+
+# Enables statistics
+stats = []
+
+# For TRIP testing
+trip = ["stats"]
+
+[dependencies]
